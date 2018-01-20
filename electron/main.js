@@ -16,7 +16,7 @@ let mainWindow
 const template = [{
   role: 'help',
   submenu: [{
-    label: 'Learn More',
+    label: 'Get Request',
     click() {
       BrowserWindow.getFocusedWindow().webContents.send('asynchronous-reply')
     }
@@ -24,6 +24,11 @@ const template = [{
     label: 'Post Request',
     click() {
       BrowserWindow.getFocusedWindow().webContents.send('asynchronous-reply2');
+    }
+  }, {
+    label: 'Post Promise Request',
+    click() {
+      BrowserWindow.getFocusedWindow().webContents.send('asynchronous-reply3');
     }
   }]
 }]
